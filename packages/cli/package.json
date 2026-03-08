@@ -1,6 +1,6 @@
 {
   "name": "@iamjarvis/extbridge-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI tool for ExtBridge cross-IDE extension deduplication",
   "type": "module",
   "publishConfig": {

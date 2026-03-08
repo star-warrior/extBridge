@@ -1,4 +1,4 @@
-import { importStoreToIde, Registry } from "@extbridge/core";
+import { importStoreToIde, Registry } from "@iamjarvis/extbridge-core";
 import { registryPath } from "../utils/paths.js";
 
 export async function importIdeCommand(

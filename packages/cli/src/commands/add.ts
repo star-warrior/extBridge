@@ -1,4 +1,9 @@
-import { Registry, fetchExtensionMeta, installExtension, syncRegistryLinks } from "@extbridge/core";
+import {
+  Registry,
+  fetchExtensionMeta,
+  installExtension,
+  syncRegistryLinks,
+} from "@iamjarvis/extbridge-core";
 import { registryPath, storeDir } from "../utils/paths.js";
 import { getEffectiveAdapters } from "../utils/adapters.js";
 

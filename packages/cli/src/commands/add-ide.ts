@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { defaultAdapters, Registry } from "@extbridge/core";
+import { defaultAdapters, Registry } from "@iamjarvis/extbridge-core";
 import { registryPath } from "../utils/paths.js";
 
 function normalizeIdeId(input: string): string {

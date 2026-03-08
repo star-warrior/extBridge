@@ -1,4 +1,4 @@
-import { initializeStore, Registry } from "@extbridge/core";
+import { initializeStore, Registry } from "@iamjarvis/extbridge-core";
 import { registryPath, storeDir } from "../utils/paths.js";
 import { getEffectiveAdapters } from "../utils/adapters.js";
 

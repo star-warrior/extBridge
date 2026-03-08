@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { defaultAdapters, type IDEAdapter, type Registry } from "@extbridge/core";
+import { defaultAdapters, type IDEAdapter, type Registry } from "@iamjarvis/extbridge-core";
 
 export function getEffectiveAdapters(registry: Registry): IDEAdapter[] {
   const builtIn = new Map(defaultAdapters.map((adapter) => [adapter.id, adapter]));

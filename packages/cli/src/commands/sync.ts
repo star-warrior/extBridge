@@ -1,4 +1,4 @@
-import { Registry, syncRegistryLinks } from "@extbridge/core";
+import { Registry, syncRegistryLinks } from "@iamjarvis/extbridge-core";
 import { registryPath, storeDir } from "../utils/paths.js";
 
 export async function syncCommand(options: { dryRun?: boolean }): Promise<void> {

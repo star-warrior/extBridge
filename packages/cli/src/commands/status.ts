@@ -1,4 +1,4 @@
-import { collectStatus, formatBytes, Registry } from "@extbridge/core";
+import { collectStatus, formatBytes, Registry } from "@iamjarvis/extbridge-core";
 import { registryPath } from "../utils/paths.js";
 import { getEffectiveAdapters } from "../utils/adapters.js";
 

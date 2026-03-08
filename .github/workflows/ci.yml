@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    # This ensures the workflow runs on PRs from ANY branch
+    branches:
+      - "**"
+
+jobs:
+  test:
+    name: Build and Test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: corepack pnpm install --frozen-lockfile
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm run test
+
+      - name: CLI smoke test (status)
+        run: corepack pnpm --filter @extbridge/cli start status
+
+      - name: CLI smoke test (init dry-run)
+        run: corepack pnpm --filter @extbridge/cli start init --dry-run
+
+      - name: CLI smoke test (sync dry-run)
+        run: corepack pnpm --filter @extbridge/cli start sync --dry-run

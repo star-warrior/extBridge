@@ -1,0 +1,421 @@
+[
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\eslint.config.mjs",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\commands\\add-ide.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\commands\\add.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\commands\\import-ide.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\commands\\init.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\commands\\status.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\commands\\sync.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\index.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\utils\\adapters.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\cli\\src\\utils\\paths.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\adapters\\antigravity.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\adapters\\cursor.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\adapters\\index.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\adapters\\types.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\adapters\\vscode.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\adapters\\vscodium.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\adapters\\windsurf.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\dedup\\dedup.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\dedup\\hash.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\import.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\index.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\init.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\install.ts",
+    "messages": [
+      {
+        "ruleId": "preserve-caught-error",
+        "severity": 2,
+        "message": "There is no `cause` attached to the symptom error being thrown.",
+        "line": 74,
+        "column": 5,
+        "messageId": "missingCause",
+        "endLine": 74,
+        "endColumn": 99,
+        "suggestions": [
+          {
+            "messageId": "includeCause",
+            "fix": { "range": [2251, 2251], "text": ", { cause: err }" },
+            "desc": "Include the original caught error as the `cause` of the symptom error."
+          }
+        ]
+      },
+      {
+        "ruleId": "preserve-caught-error",
+        "severity": 2,
+        "message": "There is no `cause` attached to the symptom error being thrown.",
+        "line": 126,
+        "column": 5,
+        "messageId": "missingCause",
+        "endLine": 126,
+        "endColumn": 71,
+        "suggestions": [
+          {
+            "messageId": "includeCause",
+            "fix": { "range": [3806, 3806], "text": ", { cause: err }" },
+            "desc": "Include the original caught error as the `cause` of the symptom error."
+          }
+        ]
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 2,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import fs from \"node:fs\";\nimport fsp from \"node:fs/promises\";\nimport os from \"node:os\";\nimport path from \"node:path\";\nimport unzipper from \"unzipper\";\nimport { hashDirectory } from \"./dedup/hash.js\";\nimport type { Registry } from \"./registry/registry.js\";\nimport { ensureDir, pathExists } from \"./utils/fs.js\";\n\n// ---------------------------------------------------------------------------\n// Types\n// ---------------------------------------------------------------------------\n\nexport interface ExtensionMeta {\n  namespace: string;\n  name: string;\n  version: string;\n  downloadUrl: string;\n  /** The folder name that will be used in the store, e.g. \"ms-python.python-2026.2.0-universal\" */\n  folderName: string;\n}\n\nexport interface InstallResult {\n  /** Registry key, same as folderName */\n  key: string;\n  storePath: string;\n  /** true when the extension was already in the store (same hash) and was not re-downloaded */\n  alreadyInstalled: boolean;\n}\n\n// ---------------------------------------------------------------------------\n// Open VSX API\n// ---------------------------------------------------------------------------\n\ninterface OpenVsxResponse {\n  namespace: string;\n  name: string;\n  version: string;\n  targetPlatform?: string;\n  files: {\n    download: string;\n  };\n}\n\n/**\n * Fetch extension metadata from Open VSX.\n *\n * @param extensionId  \"publisher.name\" (e.g. \"ms-python.python\")\n * @param version      Optional specific version; defaults to latest\n */\nexport async function fetchExtensionMeta(\n  extensionId: string,\n  version?: string,\n): Promise<ExtensionMeta> {\n  const parts = extensionId.split(\".\");\n  if (parts.length < 2) {\n    throw new Error(\n      `Invalid extension ID \"${extensionId}\". Expected format: publisher.name (e.g. ms-python.python)`,\n    );\n  }\n\n  // Support publisher.name with dots in the name (e.g. \"ms-python.python\")\n  const namespace = parts[0]!;\n  const name = parts.slice(1).join(\".\");\n\n  const url = version\n    ? `https://open-vsx.org/api/${namespace}/${name}/${version}`\n    : `https://open-vsx.org/api/${namespace}/${name}`;\n\n  let res: Response;\n  try {\n    res = await fetch(url);\n  } catch (err) {\n    throw new Error(`Network error fetching extension info for \"${extensionId}\": ${String(err)}`);\n  }\n\n  if (res.status === 404) {\n    throw new Error(\n      `Extension \"${extensionId}\" not found on Open VSX.` +\n        (version ? ` Version \"${version}\" may not exist.` : \"\"),\n    );\n  }\n  if (!res.ok) {\n    throw new Error(`Open VSX API returned HTTP ${res.status} for \"${extensionId}\"`);\n  }\n\n  const data = (await res.json()) as OpenVsxResponse;\n\n  const downloadUrl = data.files?.download;\n  if (!downloadUrl) {\n    throw new Error(`No download URL found for \"${extensionId}\" @${data.version}`);\n  }\n\n  // Build the folder name: publisher.name-version[-platform]\n  const platform =\n    data.targetPlatform && data.targetPlatform !== \"universal\"\n      ? `-${data.targetPlatform}`\n      : data.targetPlatform === \"universal\"\n        ? \"-universal\"\n        : \"\";\n  const folderName = `${namespace}.${name}-${data.version}${platform}`;\n\n  return {\n    namespace,\n    name,\n    version: data.version,\n    downloadUrl,\n    folderName,\n  };\n}\n\n// ---------------------------------------------------------------------------\n// Download + Extract\n// ---------------------------------------------------------------------------\n\n/**\n * Download the VSIX to a temp file, extract the `extension/` subfolder to\n * destDir, and return the path to the extracted extension folder.\n */\nasync function downloadAndExtract(downloadUrl: string, destDir: string): Promise<void> {\n  // 1. Download VSIX to a temp file\n  let res: Response;\n  try {\n    res = await fetch(downloadUrl);\n  } catch (err) {\n    throw new Error(`Network error downloading VSIX: ${String(err)}`);\n  }\n  if (!res.ok) {\n    throw new Error(`Failed to download VSIX: HTTP ${res.status} from ${downloadUrl}`);\n  }\n  if (!res.body) {\n    throw new Error(\"Download response has no body\");\n  }\n\n  const tmpDir = await fsp.mkdtemp(path.join(os.tmpdir(), \"extbridge-vsix-\"));\n  const vsixPath = path.join(tmpDir, \"extension.vsix\");\n\n  // Write the downloaded bytes to the temp file\n  const fileStream = fs.createWriteStream(vsixPath);\n  const reader = res.body.getReader();\n  await new Promise<void>((resolve, reject) => {\n    function pump(): void {\n      reader\n        .read()\n        .then(({ done, value }) => {\n          if (done) {\n            fileStream.end();\n            return;\n          }\n          fileStream.write(value, (err) => {\n            if (err) {\n              reject(err);\n              return;\n            }\n            pump();\n          });\n        })\n        .catch(reject);\n    }\n    fileStream.on(\"finish\", resolve);\n    fileStream.on(\"error\", reject);\n    pump();\n  });\n\n  // 2. Extract VSIX (it's a ZIP). The extension content lives in an `extension/` sub-folder.\n  const extractDir = path.join(tmpDir, \"extracted\");\n  await fsp.mkdir(extractDir, { recursive: true });\n\n  await new Promise<void>((resolve, reject) => {\n    fs.createReadStream(vsixPath)\n      .pipe(unzipper.Extract({ path: extractDir }))\n      .on(\"close\", resolve)\n      .on(\"error\", reject);\n  });\n\n  // 3. Move the `extension/` subfolder content to destDir\n  const extensionSubDir = path.join(extractDir, \"extension\");\n  if (!(await pathExists(extensionSubDir))) {\n    throw new Error(\n      \"VSIX did not contain an 'extension/' subfolder. The package may be malformed.\",\n    );\n  }\n\n  await fsp.rename(extensionSubDir, destDir);\n\n  // 4. Clean up temp dir\n  await fsp.rm(tmpDir, { recursive: true, force: true });\n}\n\n// ---------------------------------------------------------------------------\n// Unique store path helper (same pattern as dedup.ts)\n// ---------------------------------------------------------------------------\n\nasync function uniqueStorePath(basePath: string): Promise<string> {\n  if (!(await pathExists(basePath))) {\n    return basePath;\n  }\n  let counter = 1;\n  while (true) {\n    const candidate = `${basePath}-${counter}`;\n    if (!(await pathExists(candidate))) {\n      return candidate;\n    }\n    counter += 1;\n  }\n}\n\n// ---------------------------------------------------------------------------\n// Public API\n// ---------------------------------------------------------------------------\n\n/**\n * Download an extension from Open VSX and install it into the shared store.\n *\n * @param extensionId  \"publisher.name\" (e.g. \"ms-python.python\")\n * @param storeDir     Path to the shared store root (e.g. ~/.extbridge/store)\n * @param registry     The loaded Registry instance\n * @param version      Optional specific version; defaults to \"latest\"\n * @param dryRun       If true, resolves metadata only — no files are written\n */\nexport async function installExtension(\n  extensionId: string,\n  storeDir: string,\n  registry: Registry,\n  version?: string,\n  dryRun = false,\n): Promise<InstallResult> {\n  const meta = await fetchExtensionMeta(extensionId, version);\n\n  if (dryRun) {\n    return {\n      key: meta.folderName,\n      storePath: path.join(storeDir, meta.folderName),\n      alreadyInstalled: false,\n    };\n  }\n\n  await ensureDir(storeDir);\n\n  const preferredStorePath = path.join(storeDir, meta.folderName);\n  const finalStorePath = await uniqueStorePath(preferredStorePath);\n  const key = path.basename(finalStorePath);\n\n  // Download + extract the VSIX\n  await downloadAndExtract(meta.downloadUrl, finalStorePath);\n\n  // Hash the extracted folder so we can dedup future installs\n  const hash = await hashDirectory(finalStorePath);\n\n  // Check if an identical extension is already in the store\n  const existing = registry.findByHash(hash);\n  if (existing) {\n    const [existingKey] = existing;\n    // Remove the just-extracted duplicate\n    await fsp.rm(finalStorePath, { recursive: true, force: true });\n    return {\n      key: existingKey,\n      storePath: existing[1].storePath,\n      alreadyInstalled: true,\n    };\n  }\n\n  // Register the new store entry\n  registry.upsertExtension(key, {\n    id: `${meta.namespace}.${meta.name}`.toLowerCase(),\n    version: meta.version,\n    storePath: finalStorePath,\n    hash,\n    installedAt: new Date().toISOString(),\n    usedBy: [],\n    refCount: 0,\n  });\n\n  return { key, storePath: finalStorePath, alreadyInstalled: false };\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\registry\\registry.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\registry\\schema.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\status.ts",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'path' is defined but never used.",
+        "line": 2,
+        "column": 8,
+        "messageId": "unusedVar",
+        "endLine": 2,
+        "endColumn": 12,
+        "suggestions": [
+          {
+            "messageId": "removeUnusedImportDeclaration",
+            "data": { "varName": "path" },
+            "fix": { "range": [35, 65], "text": "" },
+            "desc": "Remove unused import declaration."
+          }
+        ]
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import fs from \"node:fs/promises\";\nimport path from \"node:path\";\nimport type { Registry } from \"./registry/registry.js\";\nimport type { IDEAdapter } from \"./adapters/types.js\";\nimport { dirSize, pathExists } from \"./utils/fs.js\";\n\nexport interface IDEStatus {\n  ideId: string;\n  name: string;\n  extensionsPath: string;\n  detected: boolean;\n  extensionCount: number;\n}\n\nexport interface StatusReport {\n  ides: IDEStatus[];\n  sharedExtensions: number;\n  totalExtensions: number;\n  estimatedBytesSaved: number;\n}\n\nexport async function collectStatus(\n  registry: Registry,\n  adapters: IDEAdapter[],\n): Promise<StatusReport> {\n  const data = registry.getAll();\n\n  const ides: IDEStatus[] = [];\n  for (const adapter of adapters) {\n    const extPath = adapter.getExtensionsPath();\n    const detected = adapter.isInstalled();\n    let extensionCount = 0;\n\n    if (detected && (await pathExists(extPath))) {\n      const entries = await fs.readdir(extPath, { withFileTypes: true });\n      extensionCount = entries.filter((e) => e.isDirectory() || e.isSymbolicLink()).length;\n    }\n\n    ides.push({\n      ideId: adapter.id,\n      name: adapter.name,\n      extensionsPath: extPath,\n      detected,\n      extensionCount,\n    });\n  }\n\n  const extensionEntries = Object.values(data.extensions);\n  let estimatedBytesSaved = 0;\n  for (const entry of extensionEntries) {\n    if (entry.refCount <= 1) {\n      continue;\n    }\n    if (!(await pathExists(entry.storePath))) {\n      continue;\n    }\n    const size = await dirSize(entry.storePath);\n    estimatedBytesSaved += size * (entry.refCount - 1);\n  }\n\n  const totalExtensions = extensionEntries.length;\n  const sharedExtensions = extensionEntries.filter((e) => e.refCount > 1).length;\n\n  return {\n    ides,\n    sharedExtensions,\n    totalExtensions,\n    estimatedBytesSaved,\n  };\n}\n\nexport function formatBytes(bytes: number): string {\n  const units = [\"B\", \"KB\", \"MB\", \"GB\", \"TB\"];\n  let value = bytes;\n  let index = 0;\n  while (value >= 1024 && index < units.length - 1) {\n    value /= 1024;\n    index += 1;\n  }\n  return `${value.toFixed(index === 0 ? 0 : 2)} ${units[index]}`;\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\sync.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\utils\\fs.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\src\\utils\\ide-extensions-registry.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\test\\hash.test.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\test\\ide-extensions-registry.test.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\test\\install.test.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Jay\\Big projects Code code code\\extBridge\\packages\\core\\test\\registry.test.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  }
+]

@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+corepack pnpm exec lint-staged
+# We recommend leaving full 'pnpm test' to the CI to save time during commits,
+# but it can be enabled below if needed:
+# corepack pnpm test

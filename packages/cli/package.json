@@ -1,0 +1,44 @@
+{
+  "name": "@extbridge/cli",
+  "version": "0.1.0",
+  "description": "CLI tool for ExtBridge cross-IDE extension deduplication",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jay/extbridge.git",
+    "directory": "packages/cli"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "extbridge",
+    "vscode",
+    "extensions",
+    "cli"
+  ],
+  "author": "Jay",
+  "license": "GPL-3.0",
+  "bin": {
+    "extbridge": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@extbridge/core": "workspace:*",
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

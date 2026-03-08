@@ -1,0 +1,10 @@
+export { defaultAdapters } from "./adapters/index.js";
+export type { IDEAdapter } from "./adapters/index.js";
+export { deduplicateExtension } from "./dedup/dedup.js";
+export { importStoreToIde } from "./import.js";
+export { initializeStore } from "./init.js";
+export { fetchExtensionMeta, installExtension } from "./install.js";
+export type { ExtensionMeta, InstallResult } from "./install.js";
+export { Registry } from "./registry/registry.js";
+export { collectStatus, formatBytes } from "./status.js";
+export { syncRegistryLinks } from "./sync.js";

@@ -1,0 +1,43 @@
+{
+  "name": "@extbridge/core",
+  "version": "0.1.0",
+  "description": "Core deduplication and registry logic for ExtBridge",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jay/extbridge.git",
+    "directory": "packages/core"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "extbridge",
+    "vscode",
+    "extensions",
+    "deduplication"
+  ],
+  "author": "Jay",
+  "license": "GPL-3.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@iarna/toml": "^2.2.5",
+    "unzipper": "^0.12.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/unzipper": "^0.10.11",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

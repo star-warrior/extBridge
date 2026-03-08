@@ -22,7 +22,7 @@ ExtBridge solves this by centralizing extension storage in a single local locati
 
 **Implemented now:**
 
-- 📦 Monorepo structure with `@extbridge/core` and `@extbridge/cli`
+- 📦 Monorepo structure with `@extbridge/core` and `@iamjarvis/extbridge-cli`
 - 🔌 IDE adapters for: **VS Code**, **Antigravity**, **Cursor**, **Windsurf**, **VSCodium**
 - 🗃️ Central registry (`~/.extbridge/registry.json`) with Zod validation
 - 🔑 Hash-based deduplication (SHA-256 of extension folders)
@@ -68,18 +68,18 @@ You can run ExtBridge instantly using `npx`, or install it globally for convenie
 **Run instantly via npx:**
 
 ```bash
-npx @extbridge/cli <command>
+npx @iamjarvis/extbridge-cli <command>
 ```
 
 **Install globally:**
 
 ```bash
-npm install -g @extbridge/cli
+npm install -g @iamjarvis/extbridge-cli
 ```
 
 ## 🛠️ CLI Usage
 
-_If you installed ExtBridge globally, you can just use `extbridge <command>`. Otherwise, prefix these with `npx @extbridge/cli`._
+_If you installed ExtBridge globally, you can just use `extbridge <command>`. Otherwise, prefix these with `npx @iamjarvis/extbridge-cli`._
 
 ### 📊 `status`
 

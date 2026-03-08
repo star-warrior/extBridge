@@ -1,5 +1,5 @@
 {
-  "name": "@extbridge/core",
+  "name": "@iamjarvis/extbridge-core",
   "version": "0.1.0",
   "description": "Core deduplication and registry logic for ExtBridge",
   "type": "module",

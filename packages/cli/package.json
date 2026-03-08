@@ -1,5 +1,5 @@
 {
-  "name": "@extbridge/cli",
+  "name": "@iamjarvis/extbridge-cli",
   "version": "0.1.0",
   "description": "CLI tool for ExtBridge cross-IDE extension deduplication",
   "type": "module",
@@ -32,7 +32,7 @@
     "start": "tsx src/index.ts"
   },
   "dependencies": {
-    "@extbridge/core": "workspace:*",
+    "@iamjarvis/extbridge-core": "workspace:*",
     "commander": "^13.1.0"
   },
   "devDependencies": {

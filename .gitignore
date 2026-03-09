@@ -3,3 +3,4 @@ dist
 .extbridge
 coverage
 .DS_Store
+*.tgz

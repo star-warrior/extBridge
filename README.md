@@ -1,7 +1,7 @@
 # 🌉 ExtBridge
 
-![GitHub CI](https://img.shields.io/github/actions/workflow/status/Jay/extbridge/ci.yml?branch=main&label=CI&logo=github)
-![Node Version](https://img.shields.io/node/v/extbridge?logo=node.js)
+![GitHub CI](https://img.shields.io/github/actions/workflow/status/star-warrior/extBridge/ci.yml?branch=main&label=CI&logo=github)
+![Node Version](https://img.shields.io/npm/v/@iamjarvis/extbridge-core?logo=node.js)
 ![PNPM](https://img.shields.io/badge/pnpm-10.6.0-orange?logo=pnpm)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
 

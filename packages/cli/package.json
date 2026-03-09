@@ -1,6 +1,6 @@
 {
   "name": "@iamjarvis/extbridge-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CLI tool for ExtBridge cross-IDE extension deduplication",
   "type": "module",
   "publishConfig": {
@@ -8,9 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jay/extbridge.git",
+    "url": "git+https://github.com/star-warrior/extBridge.git",
     "directory": "packages/cli"
   },
+  "bugs": {
+    "url": "https://github.com/star-warrior/extBridge/issues"
+  },
+  "homepage": "https://github.com/star-warrior/extBridge/tree/main/packages/cli#readme",
   "files": [
     "dist"
   ],

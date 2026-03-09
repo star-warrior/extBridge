@@ -1,6 +1,6 @@
 {
   "name": "@iamjarvis/extbridge-core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Core deduplication and registry logic for ExtBridge",
   "type": "module",
   "main": "dist/index.js",
@@ -10,9 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jay/extbridge.git",
+    "url": "git+https://github.com/star-warrior/extBridge.git",
     "directory": "packages/core"
   },
+  "bugs": {
+    "url": "https://github.com/star-warrior/extBridge/issues"
+  },
+  "homepage": "https://github.com/star-warrior/extBridge/tree/main/packages/core#readme",
   "files": [
     "dist"
   ],

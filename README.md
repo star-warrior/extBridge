@@ -4,6 +4,7 @@
 ![Node Version](https://img.shields.io/npm/v/@iamjarvis/extbridge-core?logo=node.js)
 ![PNPM](https://img.shields.io/badge/pnpm-10.6.0-orange?logo=pnpm)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=star-warrior.extBridge)
 
 **ExtBridge** is a cross-IDE extension deduplication tool for VS Code-compatible editors.
 It keeps one shared local copy of each extension and links IDE-specific extension folders to that shared store.

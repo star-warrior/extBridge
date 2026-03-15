@@ -33,7 +33,7 @@ jobs:
 
       # Install Playwright browser dependencies
       - name: Install Playwright Browsers
-        run: pnpm exec playwright install --with-deps
+        run: pnpm --filter @iamjarvis/extbridge-gui exec playwright install --with-deps
 
       - name: Build and Package GUI
         run: pnpm --filter @iamjarvis/extbridge-gui run build

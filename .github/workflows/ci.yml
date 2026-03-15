@@ -35,16 +35,16 @@ jobs:
         run: corepack pnpm install --frozen-lockfile
 
       - name: Build
-        run: npm run build
+        run: corepack pnpm run build
 
       - name: Test
-        run: npm run test
+        run: corepack pnpm run test
 
       - name: CLI smoke test (status)
-        run: corepack pnpm --filter @extbridge/cli start status
+        run: corepack pnpm --filter @iamjarvis/extbridge-cli start status
 
       - name: CLI smoke test (init dry-run)
-        run: corepack pnpm --filter @extbridge/cli start init --dry-run
+        run: corepack pnpm --filter @iamjarvis/extbridge-cli start init --dry-run
 
       - name: CLI smoke test (sync dry-run)
-        run: corepack pnpm --filter @extbridge/cli start sync --dry-run
+        run: corepack pnpm --filter @iamjarvis/extbridge-cli start sync --dry-run

@@ -1,11 +1,15 @@
 #!/usr/bin/env node
 import { Command } from "commander";
+import { type ConflictStrategy } from "@iamjarvis/extbridge-core";
 import { addCommand } from "./commands/add.js";
 import { addIdeCommand } from "./commands/add-ide.js";
 import { initCommand } from "./commands/init.js";
 import { importIdeCommand } from "./commands/import-ide.js";
 import { statusCommand } from "./commands/status.js";
 import { syncCommand } from "./commands/sync.js";
+import { doctorCommand } from "./commands/doctor.js";
+import { cleanCommand } from "./commands/clean.js";
+import { watchCommand } from "./commands/watch.js";
 
 async function main(): Promise<void> {
   const program = new Command();
@@ -28,7 +32,12 @@ async function main(): Promise<void> {
     .command("init")
     .description("Scan detected IDEs and deduplicate extensions into shared store")
     .option("--dry-run", "print actions without modifying files")
-    .action(async (options: { dryRun?: boolean }) => {
+    .option(
+      "--conflict <strategy>",
+      "conflict resolution strategy (keep-both, latest-wins)",
+      "keep-both",
+    )
+    .action(async (options: { dryRun?: boolean; conflict: ConflictStrategy }) => {
       await initCommand(options);
     });
 
@@ -43,7 +52,12 @@ async function main(): Promise<void> {
     .command("sync")
     .description("Recreate missing or broken links based on the registry")
     .option("--dry-run", "print actions without modifying files")
-    .action(async (options: { dryRun?: boolean }) => {
+    .option(
+      "--conflict <strategy>",
+      "conflict resolution strategy (keep-both, latest-wins)",
+      "keep-both",
+    )
+    .action(async (options: { dryRun?: boolean; conflict: ConflictStrategy }) => {
       await syncCommand(options);
     });
 
@@ -61,6 +75,34 @@ async function main(): Promise<void> {
     .option("--dry-run", "print actions without modifying files")
     .action(async (id: string, options: { dryRun?: boolean }) => {
       await importIdeCommand(id, options);
+    });
+
+  program
+    .command("doctor")
+    .description("Run health checks to detect broken links or missing extensions")
+    .action(async () => {
+      await doctorCommand();
+    });
+
+  program
+    .command("clean")
+    .description("Remove orphaned extension folders from the shared store")
+    .option("--dry-run", "print actions without modifying files")
+    .option("--force", "actually remove the orphaned folders")
+    .action(async (options: { dryRun?: boolean; force?: boolean }) => {
+      await cleanCommand(options);
+    });
+
+  program
+    .command("watch")
+    .description("Start a background watcher to automatically deduplicate extensions")
+    .option(
+      "--conflict <strategy>",
+      "conflict resolution strategy (keep-both, latest-wins)",
+      "keep-both",
+    )
+    .action(async (options: { conflict: ConflictStrategy }) => {
+      await watchCommand(options);
     });
 
   await program.parseAsync(process.argv);

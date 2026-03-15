@@ -1,6 +1,8 @@
 # 🌉 ExtBridge
 
-![GitHub CI](https://img.shields.io/github/actions/workflow/status/star-warrior/extBridge/ci.yml?branch=main&label=CI&logo=github)
+![ExtBridge Logo](assets/logo.jpg)
+
+![GitHub CI](https://img.shields.io/github/actions/workflow/status/star-warrior/extBridge/gui-tests.yml?branch=main&label=CI&logo=github)
 ![Node Version](https://img.shields.io/npm/v/@iamjarvis/extbridge-core?logo=node.js)
 ![PNPM](https://img.shields.io/badge/pnpm-10.6.0-orange?logo=pnpm)
 ![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
@@ -19,25 +21,25 @@ Developers often use multiple VS Code-based IDEs (for example VS Code, Cursor, W
 
 ExtBridge solves this by centralizing extension storage in a single local location and linking each IDE to it.
 
-## 🌟 Current Scope (Phase 1)
+## 🌟 Features & Scope
 
-**Implemented now:**
+**Implemented:**
 
-- 📦 Monorepo structure with `@extbridge/core` and `@iamjarvis/extbridge-cli`
+- 📦 Monorepo structure with `@iamjarvis/extbridge-core`, `@iamjarvis/extbridge-cli`, and `@iamjarvis/extbridge-gui`
 - 🔌 IDE adapters for: **VS Code**, **Antigravity**, **Cursor**, **Windsurf**, **VSCodium**
 - 🗃️ Central registry (`~/.extbridge/registry.json`) with Zod validation
 - 🔑 Hash-based deduplication (SHA-256 of extension folders)
 - 🔗 Cross-platform directory linking (Symlinks on Unix, Junctions on Windows)
-- 🛠️ CLI commands to manage state
+- 🛠️ CLI commands to manage state (`init`, `sync`, `status`, `add`, `add-ide`, `import-ide`, `doctor`, `clean`, `watch`)
+- 🖥️ **New Desktop GUI**: A beautifully designed Electron + React desktop application for visual management.
 - 📥 Direct extension downloads from the Open VSX Marketplace
-- ✅ Unit tests (hashing and registry persistence)
+- ✅ Unit tests and Cross-Platform E2E GUI testing (Playwright)
 
-**Not yet implemented in this phase:**
+## 📸 ExtBridge GUI
 
-- 👁️ Background watcher daemon
-- ⚔️ Conflict resolution strategies (`keep-both`, `latest-wins`, `ask`)
-- 🩺 `doctor`, `clean`, and `install` commands
-- 🖥️ GUI
+![ExtBridge GUI Desktop Interface](assets/gui.png)
+
+Manage your cross-IDE extensions entirely from our new Desktop Dashboard! Read more about it in the [GUI Documentation](documentation/gui.md).
 
 ## 📁 Project Structure
 
@@ -45,7 +47,9 @@ ExtBridge solves this by centralizing extension storage in a single local locati
 extbridge/
 ├── packages/
 │   ├── core/           # Core deduplication, registry, and adapters logic
-│   └── cli/            # ExtBridge CLI implementation (`extbridge <command>`)
+│   ├── cli/            # ExtBridge CLI implementation (`extbridge <command>`)
+│   └── gui/            # ExtBridge Desktop GUI (Electron + React + Vite)
+├── documentation/      # Detailed guides (cli.md, gui.md)
 ├── package.json
 ├── pnpm-workspace.yaml
 └── tsconfig.base.json
@@ -64,12 +68,12 @@ corepack enable
 
 ## 🚀 Getting Started
 
-You can run ExtBridge instantly using `npx`, or install it globally for convenience.
+You can run ExtBridge CLI instantly using `npx`, or install it globally for convenience.
 
 **Run instantly via npx:**
 
 ```bash
-npx @iamjarvis/extbridge-cli <command>
+npx @iamjarvis/extbridge-cli status
 ```
 
 **Install globally:**
@@ -78,94 +82,12 @@ npx @iamjarvis/extbridge-cli <command>
 npm install -g @iamjarvis/extbridge-cli
 ```
 
-## 🛠️ CLI Usage
+## 🛠️ Usage
 
-_If you installed ExtBridge globally, you can just use `extbridge <command>`. Otherwise, prefix these with `npx @iamjarvis/extbridge-cli`._
+For detailed command-line usage, check out the [CLI Documentation](documentation/cli.md).
+For detailed desktop app usage, check out the [GUI Documentation](documentation/gui.md).
 
-### 📊 `status`
-
-Shows detected IDEs, extension folder counts, shared extensions, and estimated disk savings.
-
-```bash
-extbridge status
-```
-
-### ✨ `init`
-
-Scans detected IDE extension directories, deduplicates extension content into `~/.extbridge/store`, and links IDE entries to the shared store.
-
-```bash
-extbridge init
-```
-
-_Dry-run mode:_ `extbridge init --dry-run`
-
-### 🔄 `sync`
-
-Repairs missing or broken links based on `~/.extbridge/registry.json`.
-
-```bash
-extbridge sync
-```
-
-_Dry-run mode:_ `extbridge sync --dry-run`
-
-### ➕ `add-ide`
-
-Registers a custom IDE extension directory so it participates in `status`, `init`, and `sync` workflows.
-
-If ExtBridge knows the IDE (or can infer it), you can pass only the IDE id/name:
-
-```bash
-extbridge add-ide antigravity
-```
-
-Custom extension directory:
-
-```bash
-extbridge add-ide myide "/path/to/extensions"
-```
-
-Optional display name:
-
-```bash
-extbridge add-ide myide "/path/to/extensions" --name "My IDE"
-```
-
-### 📥 `import-ide`
-
-Imports all extensions currently stored in `~/.extbridge/store` into a registered IDE by creating links and updating registry ownership.
-
-```bash
-extbridge import-ide myide
-```
-
-_Dry-run mode:_ `extbridge import-ide myide --dry-run`
-
-**Typical flow for a new IDE:**
-
-```bash
-extbridge add-ide myide "/path/to/extensions" --name "My IDE"
-extbridge import-ide myide
-```
-
-### 🌐 `add`
-
-Downloads an extension from the Open VSX marketplace and adds it to the ExtBridge store. It automatically syncs the newly downloaded extension to all detected IDEs.
-
-```bash
-extbridge add <extension-id>
-```
-
-_Example:_ `... add eamodio.gitlens`
-
-Optional flags:
-
-- `--version <version>` : Download a specific version of the extension
-- `--no-sync` : Download to the store but do not sync links to local IDEs
-- `--dry-run` : Resolve extension metadata without downloading or syncing
-
-## 🏗️ CI Compatibility Matrix
+## 🏗️ CI & Testing
 
 GitHub Actions CI runs on:
 
@@ -173,7 +95,7 @@ GitHub Actions CI runs on:
 - 🪟 Windows (`windows-latest`)
 - 🍏 macOS (`macos-latest`)
 
-The workflow validates install, build, tests, and CLI smoke commands on each OS.
+The workflow validates UI changes using **Playwright** E2E tests across all platforms, ensuring ExtBridge GUI runs perfectly everywhere.
 
 ## 📂 Storage Layout
 
@@ -188,38 +110,8 @@ ExtBridge uses the following local files/directories:
 ## ⚠️ Safety Notes
 
 - Start with `--dry-run` before `init` on machines with important local setups.
+- Use the new `doctor` command to diagnose broken symlinks.
 - Review extension state with `status` before and after migration.
-- Keep backups for critical development environments while the project is evolving.
-
-## 💻 Development
-
-```bash
-# typecheck all packages
-npm run typecheck
-
-# build
-npm run build
-
-# test
-npm run test
-```
-
-## 🪝 Git Hooks & Workflow
-
-This repository uses **Husky** to automate checks and maintain code quality across the team. We use a structured, multi-stage validation workflow:
-
-1. **Pre-commit Hook (Fast checks)**:
-   - Linting is performed precisely on updated files via `lint-staged`.
-   - Code is automatically formatted by `prettier --write`.
-2. **Commit-msg Hook**:
-   - Commit messages are enforced to follow the [Conventional Commits](https://www.conventionalcommits.org/) standard via `commitlint`.
-3. **Pre-push Hook (Heavy checks)**:
-   - Before any code leaves your machine, the full automated test suite runs (`pnpm test`).
-   - TypeScript compiles strictly to catch all types issues (`pnpm typecheck`).
-4. **Continuous Integration (CI)**:
-   - GitHub Actions validates tests and builds across Linux, Windows, and macOS simultaneously.
-
-_Note: If you are in an extreme emergency and need to bypass local hooks, add `--no-verify` to your git command. However, GitHub Actions CI will serve as the ultimate source of truth._
 
 ## 🤝 Contributing
 
@@ -227,7 +119,7 @@ See `CONTRIBUTING.md` for development workflow, coding standards, and pull reque
 
 ## 🔐 Security
 
-See `SECURITY.md` for vulnerability reporting instructions.
+See `SECURITY.md` for vulnerability reporting instructions and Electron GUI security details.
 
 ## 📝 License
 

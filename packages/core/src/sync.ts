@@ -3,7 +3,7 @@ import path from "node:path";
 import type { Registry } from "./registry/registry.js";
 import { createDirectoryLink, pathExists } from "./utils/fs.js";
 import { upsertIdeExtensionEntry } from "./utils/ide-extensions-registry.js";
-import { deduplicateExtension } from "./dedup/dedup.js";
+import { deduplicateExtension, type ConflictStrategy } from "./dedup/dedup.js";
 
 export interface SyncReport {
   discovered: number;
@@ -16,6 +16,8 @@ async function discoverUntrackedExtensions(
   registry: Registry,
   storeDir: string,
   dryRun: boolean,
+  strategy: ConflictStrategy = "keep-both",
+  onProgress?: (msg: string) => void,
 ): Promise<{
   discovered: number;
   skipped: number;
@@ -45,8 +47,9 @@ async function discoverUntrackedExtensions(
       }
 
       const extensionPath = path.join(ide.extensionsPath, extensionKey);
+      onProgress?.(`[${ide.name}] Processing untracked extension ${extensionKey}...`);
       try {
-        await deduplicateExtension(extensionPath, ideId, storeDir, registry, dryRun);
+        await deduplicateExtension(extensionPath, ideId, storeDir, registry, dryRun, strategy);
         discovered += 1;
       } catch {
         failed += 1;
@@ -61,8 +64,16 @@ export async function syncRegistryLinks(
   registry: Registry,
   storeDir: string,
   dryRun = false,
+  strategy: ConflictStrategy = "keep-both",
+  onProgress?: (msg: string) => void,
 ): Promise<SyncReport> {
-  const discovery = await discoverUntrackedExtensions(registry, storeDir, dryRun);
+  const discovery = await discoverUntrackedExtensions(
+    registry,
+    storeDir,
+    dryRun,
+    strategy,
+    onProgress,
+  );
   const data = registry.getAll();
   let repaired = 0;
   let skipped = discovery.skipped;

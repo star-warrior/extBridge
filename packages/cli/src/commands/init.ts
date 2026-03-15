@@ -1,14 +1,17 @@
-import { initializeStore, Registry } from "@iamjarvis/extbridge-core";
+import { initializeStore, Registry, type ConflictStrategy } from "@iamjarvis/extbridge-core";
 import { registryPath, storeDir } from "../utils/paths.js";
 import { getEffectiveAdapters } from "../utils/adapters.js";
 
-export async function initCommand(options: { dryRun?: boolean }): Promise<void> {
+export async function initCommand(options: {
+  dryRun?: boolean;
+  conflict?: ConflictStrategy;
+}): Promise<void> {
   const dryRun = Boolean(options.dryRun);
   const registry = new Registry(registryPath);
   await registry.load();
   const adapters = getEffectiveAdapters(registry);
 
-  const report = await initializeStore(adapters, storeDir, registry, dryRun);
+  const report = await initializeStore(adapters, storeDir, registry, dryRun, options.conflict);
 
   if (!dryRun) {
     await registry.save();

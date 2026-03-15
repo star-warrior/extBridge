@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import type { IDEAdapter } from "./adapters/types.js";
-import { deduplicateExtension } from "./dedup/dedup.js";
+import { deduplicateExtension, type ConflictStrategy } from "./dedup/dedup.js";
 import type { Registry } from "./registry/registry.js";
 import { ensureDir } from "./utils/fs.js";
 
@@ -24,6 +24,8 @@ export async function initializeStore(
   storeDir: string,
   registry: Registry,
   dryRun = false,
+  strategy: ConflictStrategy = "keep-both",
+  onProgress?: (msg: string) => void,
 ): Promise<InitReport> {
   const detected = adapters.filter((a) => a.isInstalled());
   let scannedExtensions = 0;
@@ -50,8 +52,16 @@ export async function initializeStore(
       }
       scannedExtensions += 1;
       const extPath = path.join(extensionsPath, entry.name);
+      onProgress?.(`[${adapter.name}] Processing ${entry.name}...`);
       try {
-        const result = await deduplicateExtension(extPath, adapter.id, storeDir, registry, dryRun);
+        const result = await deduplicateExtension(
+          extPath,
+          adapter.id,
+          storeDir,
+          registry,
+          dryRun,
+          strategy,
+        );
         if (result.action === "linked-existing") {
           linkedExisting += 1;
         } else {

@@ -1,6 +1,6 @@
 # Contributing to ExtBridge
 
-Thanks for contributing to ExtBridge.
+Thanks for contributing to ExtBridge!
 
 ## Before You Start
 
@@ -15,21 +15,22 @@ Thanks for contributing to ExtBridge.
    ```bash
    corepack enable
    ```
-3. Install dependencies (Husky will initialize automatically):
+3. Install dependencies:
    ```bash
    corepack pnpm install
    ```
 4. Build, test, and format code:
    ```bash
    npm run build
+   # Run core tests
    npm run test
-   npm run format
    ```
 
 ## Workspace Layout
 
-- `packages/core`: shared business logic (adapters, registry, dedup, sync, status)
+- `packages/core`: shared business logic (adapters, registry, dedup, sync, doctor, watch)
 - `packages/cli`: command-line interface
+- `packages/gui`: Desktop GUI built with Electron, React, Vite, and tailwindcss.
 
 ## Coding Guidelines
 
@@ -37,8 +38,22 @@ Thanks for contributing to ExtBridge.
 - Keep modules small and purpose-specific.
 - Favor explicit errors over silent failures.
 - Preserve cross-platform behavior (Windows + Unix-like).
-- Use ASCII unless the file already requires Unicode.
-- Add concise comments only when logic is non-obvious.
+- For the GUI: ensure React components are strictly typed and use Tailwind for UI styling following the `kit/DESIGN_KIT.md`.
+
+## GUI Development & Testing
+
+When developing the GUI in `packages/gui`:
+
+1. Start the dev server:
+   ```bash
+   pnpm --filter @iamjarvis/extbridge-gui run dev
+   ```
+2. Run E2E Playwright tests to ensure Cross-Platform compatibility:
+   ```bash
+   pnpm --filter @iamjarvis/extbridge-gui exec playwright test
+   ```
+
+ExtBridge's CI will enforce Playwright E2E tests before merges on Linux, Windows, and macOS.
 
 ## Safety Guidelines
 
@@ -46,25 +61,14 @@ ExtBridge modifies extension directory entries. Follow these rules:
 
 - Do not introduce destructive behavior without a dry-run path.
 - Ensure file operations are deliberate and recoverable.
-- Do not silently remove user data.
-- Maintain or improve current safety behavior for `init` and `sync`.
-
-## Testing
-
-- Add or update tests for behavior changes in `packages/core`.
-- Keep tests deterministic and isolated (use temporary directories).
-- Ensure all tests pass before creating a PR:
-  ```bash
-  npm run test
-  ```
+- Maintain or improve current safety behavior for `init`, `sync`, `clean`, and `doctor`.
 
 ## Pull Request Checklist
 
 - [ ] Build passes (`npm run build`)
-- [ ] Tests and typechecks pass (`npm run test`, `npm run typecheck`)
-- [ ] Linter returns no warnings (`npm run lint`)
-- [ ] Documentation updated for user-facing changes
-- [ ] Changes are scoped and explained in the PR description
+- [ ] Core tests and typechecks pass (`npm run test`, `npm run typecheck`)
+- [ ] GUI E2E tests pass (`playwright test`)
+- [ ] Documentation updated for user-facing changes (README.md, CLI docs, GUI docs)
 - [ ] Backward compatibility and migration impact considered
 
 ## Commit Message Guidance
@@ -72,13 +76,13 @@ ExtBridge modifies extension directory entries. Follow these rules:
 Use clear, imperative commit subjects, for example:
 
 - `core: fix symlink repair for missing store entries`
-- `cli: add dry-run output for sync`
-- `docs: document phase 1 command behavior`
+- `cli: add doctor command`
+- `gui: implement dark mode toggle`
+- `docs: update GUI setup instructions`
 
 ## Reporting Issues
 
-- Bug reports: include OS, Node version, command run, expected result, and actual result.
-- Feature requests: explain use case, constraints, and proposed behavior.
+- Bug reports: include OS, Node version, command run (or GUI screen), expected result, and actual result.
 
 ## Security Reports
 

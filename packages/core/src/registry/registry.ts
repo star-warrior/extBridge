@@ -40,6 +40,10 @@ export class Registry {
     return Object.entries(this.data.extensions).find(([, ext]) => ext.hash === hash);
   }
 
+  findAllById(id: string): [string, RegistryData["extensions"][string]][] {
+    return Object.entries(this.data.extensions).filter(([, ext]) => ext.id === id);
+  }
+
   upsertExtension(key: string, entry: RegistryData["extensions"][string]): void {
     this.data.extensions[key] = entry;
   }

@@ -1,12 +1,15 @@
-import { Registry, syncRegistryLinks } from "@iamjarvis/extbridge-core";
+import { Registry, syncRegistryLinks, type ConflictStrategy } from "@iamjarvis/extbridge-core";
 import { registryPath, storeDir } from "../utils/paths.js";
 
-export async function syncCommand(options: { dryRun?: boolean }): Promise<void> {
+export async function syncCommand(options: {
+  dryRun?: boolean;
+  conflict?: ConflictStrategy;
+}): Promise<void> {
   const dryRun = Boolean(options.dryRun);
   const registry = new Registry(registryPath);
   await registry.load();
 
-  const result = await syncRegistryLinks(registry, storeDir, dryRun);
+  const result = await syncRegistryLinks(registry, storeDir, dryRun, options.conflict);
   if (!dryRun) {
     await registry.save();
   }

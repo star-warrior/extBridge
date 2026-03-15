@@ -21,13 +21,24 @@ async function walkFiles(dir: string, base = dir): Promise<string[]> {
 export async function hashDirectory(dir: string): Promise<string> {
   const hash = createHash("sha256");
   const files = await walkFiles(dir);
-  for (const relativePath of files) {
-    const absolutePath = path.join(dir, relativePath);
-    const content = await fs.readFile(absolutePath);
-    hash.update(relativePath);
-    hash.update("\0");
-    hash.update(content);
-    hash.update("\0");
+
+  // Read in chunks to speed up I/O dramatically on Windows,
+  // but update the hash sequentially to maintain deterministic output.
+  const chunkSize = 50;
+  for (let i = 0; i < files.length; i += chunkSize) {
+    const chunk = files.slice(i, i + chunkSize);
+    const contents = await Promise.all(
+      chunk.map(async (file) => {
+        const absolutePath = path.join(dir, file);
+        return { file, data: await fs.readFile(absolutePath) };
+      }),
+    );
+    for (const item of contents) {
+      hash.update(item.file);
+      hash.update("\0");
+      hash.update(item.data);
+      hash.update("\0");
+    }
   }
   return `sha256:${hash.digest("hex")}`;
 }

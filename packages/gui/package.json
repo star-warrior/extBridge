@@ -10,6 +10,9 @@
     "preview": "vite preview",
     "package": "electron-builder"
   },
+  "build": {
+    "productName": "extbridge-gui"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

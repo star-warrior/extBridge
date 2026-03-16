@@ -6,7 +6,6 @@ on:
       - main
       - master
   pull_request:
-    # This ensures the workflow runs on PRs from ANY branch
     branches:
       - "**"
 
@@ -17,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [windows-latest, macos-latest]
 
     steps:
       - name: Checkout
@@ -36,6 +35,42 @@ jobs:
 
       - name: Build
         run: corepack pnpm run build
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+
+      - name: Test
+        run: corepack pnpm run test
+
+      - name: CLI smoke test (status)
+        run: corepack pnpm --filter @iamjarvis/extbridge-cli start status
+
+      - name: CLI smoke test (init dry-run)
+        run: corepack pnpm --filter @iamjarvis/extbridge-cli start init --dry-run
+
+      - name: CLI smoke test (sync dry-run)
+        run: corepack pnpm --filter @iamjarvis/extbridge-cli start sync --dry-run
+
+  test-linux:
+    name: Build and Test (ubuntu-latest)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: corepack pnpm install --frozen-lockfile
+
+      - name: Build (skip GUI)
+        run: corepack pnpm -r --filter=!@iamjarvis/extbridge-gui build
 
       - name: Test
         run: corepack pnpm run test

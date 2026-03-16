@@ -11,7 +11,6 @@ on:
 
 jobs:
   publish:
-    # Only run this job if the CI workflow was actually successful
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
@@ -23,7 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # Setting a registry URL automatically configures the .npmrc for publishing using NODE_AUTH_TOKEN
           registry-url: "https://registry.npmjs.org"
 
       - name: Enable Corepack
@@ -32,12 +30,10 @@ jobs:
       - name: Install dependencies
         run: corepack pnpm install --frozen-lockfile
 
-      - name: Build
-        run: npm run build
+      - name: Build (skip GUI)
+        run: corepack pnpm -r --filter=!@iamjarvis/extbridge-gui build
 
       - name: Publish to npm
-        # We add --no-git-checks to ensure the CI doesn't get blocked by arbitrary git state checks on the runner
         run: corepack pnpm -r publish --no-git-checks
         env:
-          # This maps your granular NPM_TOKEN secret to the token the actions/setup-node step expects
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
